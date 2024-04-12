@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="This is VideoTube, a clone of the very popular video-sharing platform YouTube."
+    />
+
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./images/favicon-16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./images/apple-touch-icon.png"
+    />
+
+    <title>VideoTube</title>
+    <link rel="stylesheet" href="./styles/global.css" />
+    <link rel="stylesheet" href="./styles/header.css" />
+    <link rel="stylesheet" href="./styles/sidebar.css" />
+    <link rel="stylesheet" href="./styles/main-section.css" />
+    <link rel="stylesheet" href="./styles/content-section.css" />
+    <link rel="stylesheet" href="./styles/genre.css" />
+    <link rel="stylesheet" href="./styles/videos-section.css" />
+
+    <script src="./js/header.js" defer></script>
+    <script src="./js/sidebar.js" defer></script>
+    <script src="./js/genre.js" defer></script>
+    <script src="./js/video.js" defer></script>
+  </head>
+  <body>
+    <!-- header -->
+    <header class="header">
+      <div class="header-container">
+        <!-- hamburger -->
+        <div class="hamburger" data-hamburger>
+          <div class="slice"></div>
+          <div class="slice"></div>
+          <div class="slice"></div>
+        </div>
+
+        <!-- logo -->
+        <div class="brand">
+          <a href="#"
+            ><img class="brand-logo" src="./images/logo.png" alt="logo"
+          /></a>
+        </div>
+
+        <!-- searchbar -->
+        <div class="searchbar-container" data-searchbar-container>
+          <!-- hide searchbar container button -->
+          <button class="button hide-searchbar-button" data-hide-searchbar>
+            &larr;
+          </button>
+
+          <div class="searchbar">
+            <div class="pre-input">
+              <img
+                class="icon search-icon pre-input-icon"
+                src="./images/search.png"
+              />
+            </div>
+
+            <input
+              type="text"
+              name="search"
+              id="search-input"
+              placeholder="Search"
+              class="search-input"
+              data-search-input
+            />
+
+            <button class="button search-button">
+              <img
+                class="icon search-icon"
+                src="./images/search.png"
+                alt="search"
+              />
+            </button>
+          </div>
+
+          <!-- searchbar container mike button -->
+          <button class="button mike-button">
+            <img class="icon mike-icon" src="./images/mike.png" alt="mike" />
+          </button>
+        </div>
+
+        <!-- show search bar on small screen -->
+        <button class="button show-searchbar-button" data-show-searchbar>
+          <img
+            class="icon search-icon"
+            src="./images/search.png"
+            alt="search"
+          />
+        </button>
+
+        <!-- mike -->
+        <button class="button mike-button" title="mike">
+          <img class="icon mike-icon" src="./images/mike.png" alt="mike" />
+        </button>
+
+        <!-- create -->
+        <button class="button create-button" title="create">
+          <img
+            class="icon create-icon"
+            src="./images/create.png"
+            alt="create"
+          />
+        </button>
+
+        <!-- bell -->
+        <button class="button bell-button" title="notifications">
+          <img class="icon bell-icon" src="./images/bell.png" alt="create" />
+        </button>
+
+        <!-- account -->
+        <button class="button account-button">
+          <img class="icon account-icon" src="./images/user.png" alt="user" />
+        </button>
+      </div>
+    </header>
+
+    <!-- sidebar -->
+    <div class="sidebar-container" data-sidebar>
+      <aside class="sidebar">
+        <!-- sidebar header -->
+        <div class="sidebar-header">
+          <!-- hamburger -->
+          <div class="hamburger" data-sidebar-hamburger>
+            <div class="slice"></div>
+            <div class="slice"></div>
+            <div class="slice"></div>
+          </div>
+
+          <!-- logo -->
+          <div class="brand">
+            <a href="#"
+              ><img class="brand-logo" src="./images/logo.png" alt="logo"
+            /></a>
+          </div>
+        </div>
+
+        <!-- sidebar navingation -->
+        <nav class="navbar" data-navbar></nav>
+      </aside>
+    </div>
+
+    <!-- main section -->
+    <main class="main-section">
+      <section class="mini-sidebar">
+        <ul class="mini-sidebar-list">
+          <li class="mini-sidebar-list-item">
+            <a href="#" class="mini-sidebar-list-item-link">
+              <img
+                src="./images/home.png"
+                alt="home"
+                class="icon mini-sidebar-list-item-icon"
+              />
+
+              <span class="mini-sidebar-list-item-text">Home</span>
+            </a>
+          </li>
+
+          <li class="mini-sidebar-list-item">
+            <a href="#" class="mini-sidebar-list-item-link">
+              <img
+                src="./images/shorts.png"
+                alt="shorts"
+                class="icon mini-sidebar-list-item-icon"
+              />
+
+              <span class="mini-sidebar-list-item-text">Shorts</span>
+            </a>
+          </li>
+
+          <li class="mini-sidebar-list-item">
+            <a href="#" class="mini-sidebar-list-item-link">
+              <img
+                src="./images/subscriptions.png"
+                alt="subscriptions"
+                class="icon mini-sidebar-list-item-icon"
+              />
+
+              <span class="mini-sidebar-list-item-text">Subscriptions</span>
+            </a>
+          </li>
+
+          <li class="mini-sidebar-list-item">
+            <a href="#" class="mini-sidebar-list-item-link">
+              <img
+                src="./images/you.png"
+                alt="you"
+                class="icon mini-sidebar-list-item-icon"
+              />
+
+              <span class="mini-sidebar-list-item-text">You</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <article class="content-section">
+        <!-- section genre -->
+        <section class="genre-section">
+          <button
+            class="scroll-button scroll-left-button"
+            data-genre-scroll-left-button
+          >
+            &lt;
+          </button>
+
+          <ul class="genre-list" data-genre-list>
+            <li class="genre-item">All</li>
+            <li class="genre-item">Gaming</li>
+            <li class="genre-item">Pull-ups</li>
+            <li class="genre-item">Computer Progarmming</li>
+            <li class="genre-item">Web Development</li>
+            <li class="genre-item">WWE</li>
+            <li class="genre-item">Music</li>
+            <li class="genre-item">Minecraft</li>
+            <li class="genre-item">JavaScript</li>
+            <li class="genre-item">MERN</li>
+            <li class="genre-item">NextJs</li>
+            <li class="genre-item">Speedruns</li>
+            <li class="genre-item">React</li>
+            <li class="genre-item">Recently uploaded</li>
+            <li class="genre-item">Watched</li>
+            <li class="genre-item">New to you</li>
+          </ul>
+
+          <button
+            class="scroll-button scroll-right-button show"
+            data-genre-scroll-right-button
+          >
+            &gt;
+          </button>
+        </section>
+
+        <!-- videos section -->
+        <section class="videos-section" data-videos-section></section>
+      </article>
+    </main>
+
+    <!-- templates -->
+
+    <!-- navbar section -->
+    <template data-navbar-section-template>
+      <section class="navbar-section" data-navbar-section>
+        <ul class="navbar-list" data-navbar-list></ul>
+      </section>
+    </template>
+
+    <!-- navbar section list item -->
+    <template data-navbar-list-item-template>
+      <li class="navbar-list-item" data-navbar-list-item>
+        <img
+          class="icon list-item-icon"
+          src=""
+          alt=""
+          data-navbar-list-item-image
+        />
+        <span class="list-item-text" data-navbar-list-item-text></span>
+      </li>
+    </template>
+
+    <!-- video card -->
+    <template data-video-card-template>
+      <div class="video-card" data-video-card>
+        <img src="" alt="" class="video-image" data-video-card-image />
+
+        <div class="video-info" data-video-info>
+          <img
+            src=""
+            alt=""
+            class="video-channel-logo"
+            data-video-channel-logo
+          />
+
+          <div class="video-info-content" data-video-info-content>
+            <h4 class="video-title" data-video-title></h4>
+
+            <div class="video-channel-info" data-video-channel-info>
+              <div class="channel-title" data-channel-title></div>
+              <div class="channel-info" data-channel-info></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </template>
+  </body>
+</html>

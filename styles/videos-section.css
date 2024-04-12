@@ -1,0 +1,45 @@
+.videos-section {
+  padding: 0 1em;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.video-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0.5em;
+}
+
+.video-image {
+  border-radius: 15px;
+  object-fit: cover;
+  object-position: center;
+  aspect-ratio: 16/9;
+}
+
+.video-info {
+  display: flex;
+  gap: 1rem;
+}
+
+.video-channel-logo {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  object-position: center;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}
+
+.video-info-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.video-channel-info {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 0.9rem;
+  font-weight: 500;
+}

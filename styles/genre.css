@@ -1,0 +1,68 @@
+.content-section > .genre-section {
+  padding: 1em;
+  background-color: white;
+  position: sticky;
+  top: 70px;
+  transform: translateY(-20%);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  overflow: hidden;
+}
+
+.genre-list {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  scroll-behavior: smooth;
+  overflow-x: scroll;
+  scrollbar-width: none;
+}
+
+.genre-list::-webkit-scrollbar {
+  display: none;
+}
+
+.genre-item {
+  white-space: nowrap;
+  background-color: rgba(211, 211, 211, 0.3);
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 0.5em 1em;
+  border-radius: 7px;
+  user-select: none;
+  cursor: pointer;
+}
+
+.genre-item:hover {
+  background-color: rgba(211, 211, 211, 0.5);
+}
+
+.genre-item:nth-child(1) {
+  color: white;
+  background-color: black;
+}
+
+.genre-section > .scroll-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  padding: 0.7em;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+
+  background: none;
+  border: none;
+  display: none;
+  cursor: pointer;
+}
+
+.genre-section > .scroll-button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.scroll-button.show {
+  display: flex;
+}

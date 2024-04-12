@@ -1,0 +1,133 @@
+.sidebar-container {
+  min-height: 100dvh;
+  width: 100dvw;
+  position: fixed;
+  inset: 0;
+  z-index: 3;
+  background-color: transparent;
+
+  --transition-duration: 300ms;
+  --transition-timing-function: ease-in-out;
+  --transition-delay: 200ms;
+
+  transform: translateX(-100%);
+  transition: background-color var(--transition-duration)
+      var(--transition-timing-function),
+    transform var(--transition-duration) var(--transition-timing-function)
+      var(--transition-delay);
+}
+
+.sidebar-container .sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 250px;
+  background-color: white;
+  overflow-y: scroll;
+}
+
+.sidebar-container.sidebar-open {
+  transform: translateX(0);
+  background-color: rgba(0, 0, 0, 0.3);
+
+  transition: transform var(--transition-duration)
+      var(--transition-timing-function),
+    background-color var(--transition-duration)
+      var(--transition-timing-function) var(--transition-delay);
+}
+
+.sidebar .hamburger > .slice {
+  pointer-events: none;
+}
+
+.sidebar .hamburger:hover {
+  background-color: transparent;
+}
+
+/* .sidebar .brand {
+  margin: 0;
+} */
+
+.sidebar-header {
+  padding: 0.5em;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: sticky;
+  top: 0;
+  background-color: white;
+}
+
+.navbar-section {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  padding: 1em 0;
+}
+
+.navbar-section-heading {
+  padding: 0.5em 1.5em;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.navbar-list {
+  padding: 0 0.7em;
+}
+
+.navbar-links-list {
+  padding: 0.5em 1.5em;
+  display: flex;
+  column-gap: 0.7rem;
+  flex-wrap: wrap;
+}
+
+.navbar-list-item {
+  padding: 0.5em 1em;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  cursor: pointer;
+}
+
+.navbar-links-list-item {
+  padding: 0;
+  border-radius: 0;
+  display: inline;
+}
+
+.navbar-link {
+  font-size: 0.85rem;
+  color: rgba(0, 0, 0, 0.7);
+  font-weight: 500;
+}
+
+.nav-footer {
+  padding: 0.5em 1.9em;
+  font-size: 0.85rem;
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 500;
+}
+
+.navbar-list-item.active,
+.navbar-list-item:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.navbar-list-item.active:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.navbar-link:hover {
+  background-color: white;
+}
+
+.list-item-text {
+  font-size: 0.9rem;
+}
+
+.navbar-list-item.active > .list-item-text {
+  font-weight: 500;
+}

@@ -1,0 +1,201 @@
+.header {
+  position: sticky;
+  top: 0;
+  background-color: white;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5em;
+  width: 98%;
+  position: relative;
+}
+
+.hamburger {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  align-items: center;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  transition: background-color 150ms ease-in-out;
+}
+
+.hamburger > .slice {
+  width: 50%;
+  height: 1.3px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hamburger:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.brand {
+  background-color: #333;
+  border-radius: 5px;
+  padding: 0.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.brand-logo {
+  width: 100px;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.searchbar-container {
+  margin-left: auto;
+  width: 50%;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+}
+
+.searchbar {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 999px;
+  display: flex;
+  flex-grow: 1;
+  align-items: stretch;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.pre-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  padding: 0.5em;
+  border: 1px solid blue;
+  border-right: none;
+  border-top-left-radius: 999px;
+  border-bottom-left-radius: 999px;
+  display: none;
+}
+
+.searchbar > .search-input {
+  border: none;
+  outline: none;
+  flex-grow: 1;
+  width: 75%;
+  font-size: 1.2rem;
+  padding: 0.5em 1em;
+}
+
+.searchbar:has(.search-input:focus) .pre-input {
+  display: flex;
+}
+
+.search-input:focus {
+  border: 1px solid blue;
+  border-left-color: transparent;
+  padding-left: 0;
+}
+
+.searchbar > .search-button {
+  border-left: 1px solid rgba(0, 0, 0, 0.3);
+  width: 70px;
+}
+
+.hide-searchbar-button {
+  display: none;
+  font-size: 1.3rem;
+  font-weight: bold;
+  border-radius: 50%;
+}
+
+.searchbar-container > .mike-button {
+  display: none;
+}
+
+.show-searchbar-button {
+  margin-left: auto;
+  display: none;
+}
+
+.mike-button,
+.create-button,
+.bell-button,
+.account-button,
+.show-searchbar-button {
+  background: none;
+  border-radius: 50%;
+}
+
+.account-button {
+  padding: 0;
+}
+
+.account-button:hover {
+  background: none;
+}
+
+.mike-button {
+  margin-right: auto;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.account-button > .account-icon {
+  width: 39px;
+  height: 39px;
+}
+
+@media (max-width: 500px) {
+  .mike-button,
+  .create-button,
+  .bell-button {
+    display: none;
+  }
+
+  /* .hide-searchbar-button {
+    font-size: 1rem;
+  }
+
+  .searchbar > .search-input {
+    font-size: 1rem;
+  } */
+}
+
+@media (max-width: 700px) {
+  .searchbar-container {
+    display: none;
+  }
+
+  .show-searchbar-button {
+    display: flex;
+  }
+
+  .mike-button {
+    margin-right: 0;
+  }
+
+  .searchbar-container.active {
+    position: absolute;
+    left: 0;
+    display: flex;
+    padding: 0.5em 1em;
+    width: 100%;
+  }
+
+  .hide-searchbar-button {
+    display: flex;
+  }
+
+  .searchbar-container > .mike-button {
+    display: flex;
+  }
+}

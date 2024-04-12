@@ -1,0 +1,41 @@
+.main-section {
+  display: flex;
+}
+
+.mini-sidebar {
+  align-self: flex-start;
+  padding: 0.2em;
+  position: sticky;
+  top: 70px;
+}
+
+.mini-sidebar-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mini-sidebar-list-item-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  padding: 0.05em;
+  border-radius: 10px;
+  aspect-ratio: 1/1;
+}
+
+.mini-sidebar-list-item-link:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.mini-sidebar-list-item-text {
+  font-size: 0.7rem;
+}
+
+@media (max-width: 750px) {
+  .mini-sidebar {
+    display: none;
+  }
+}
